@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.Double?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Polygon?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="madar.FXMLController">
+    <Pane fx:id="placepart" prefHeight="674.0" prefWidth="831.0" style="-fx-background-color: #a0e3e9;">
+         <children>
+         <Line endX="444.5" endY="219.0" layoutX="-349.0" layoutY="299.0" startX="444.5" startY="144.0" strokeWidth="2.0" />
+            <Button fx:id="bt" layoutX="143.0" layoutY="502.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#simdeploy" text="add" />
+         <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="-23.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true" />
+         <Polygon fill="DODGERBLUE" layoutX="124.0" layoutY="147.0" stroke="BLACK" strokeType="INSIDE" visible="false">
+           <points>
+             <Double fx:value="-50.0" />
+             <Double fx:value="40.0" />
+             <Double fx:value="50.0" />
+             <Double fx:value="40.0" />
+             <Double fx:value="0.0" />
+             <Double fx:value="-60.0" />
+           </points>
+         </Polygon>
+            <ImageView fitHeight="91.0" fitWidth="86.0" layoutX="53.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+               <Image url="@moghavemat.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="moghavematvalue" layoutX="143.0" layoutY="40.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="120.0" promptText="resistor value" />
+            <TextField fx:id="jaryanmostaghelvalue" layoutX="142.0" layoutY="174.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="150.0" promptText="Current Source value" />
+            <TextField fx:id="voltagmostaghelvalue" layoutX="142.0" layoutY="306.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="150.0" promptText="Voltage Source value" />
+            <TextField fx:id="moghavematstart" layoutX="142.0" layoutY="74.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="100.0" promptText="start point" />
+            <TextField fx:id="moghavetend" layoutX="142.0" layoutY="109.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="100.0" promptText="end point" />
+            <TextField fx:id="jaryanmostaghelstart" layoutX="142.0" layoutY="206.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="100.0" promptText="start point" />
+            <TextField fx:id="jaryanmostaghelend" layoutX="142.0" layoutY="241.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="100.0" promptText="end point" />
+            <TextField fx:id="voltagmostagelstart" layoutX="142.0" layoutY="337.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="100.0" promptText="start point" />
+            <TextField fx:id="voltagmostagelend" layoutX="142.0" layoutY="370.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="100.0" promptText="end point" />
+            <TextField fx:id="simstart" layoutX="142.0" layoutY="442.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="142.0" promptText="wire start point" />
+            <TextField fx:id="simend" layoutX="142.0" layoutY="474.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="142.0" promptText="wire end point" />
+            <Button layoutX="143.0" layoutY="142.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#moghavematdeploy" text="add" />
+            <Button layoutX="143.0" layoutY="271.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#deployjaryanmostaghel" text="add" />
+            <Button layoutX="143.0" layoutY="399.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#deployvoltagmostaghel" text="add" />
+         <TextField fx:id="fildgroundnode" layoutX="138.0" layoutY="569.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="100.0" promptText="ground point" />
+         <Button layoutX="138.0" layoutY="601.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#deploygroundednode" text="add" />
+         <ImageView fitHeight="115.0" fitWidth="63.0" layoutX="65.0" layoutY="168.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@jaryanmostaghel.png" />
+            </image>
+     </ImageView>
+         <ImageView fitHeight="115.0" fitWidth="58.0" layoutX="67.0" layoutY="306.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@voltazhmostaghel.png" />
+            </image>
+         </ImageView>
+         <TextField fx:id="moghavematstartcal" layoutX="250.0" layoutY="75.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="100.0" promptText="start node" />
+         <TextField fx:id="moghavetendcal" layoutX="250.0" layoutY="109.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="100.0" promptText="end node" />
+         <TextField fx:id="jaryanmostaghelstartcal" layoutX="250.0" layoutY="206.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="100.0" promptText="start node" />
+         <TextField fx:id="jaryanmostaghelendcal" layoutX="250.0" layoutY="242.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="100.0" promptText="end node" />
+         <TextField fx:id="voltagmostagelstartcal" layoutX="250.0" layoutY="337.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="100.0" promptText="positive node" />
+         <TextField fx:id="voltagmostagelendcal" layoutX="250.0" layoutY="370.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="100.0" promptText="negative node" />
+         <TextField fx:id="jaryanvabastebejaryanvalue" layoutX="435.0" layoutY="39.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="230.0" promptText="Current Controlled Current Source value" />
+         <TextField fx:id="jvjstart" layoutX="437.0" layoutY="71.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="100.0" promptText="start point" />
+         <TextField fx:id="jvjend" layoutX="437.0" layoutY="106.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="100.0" promptText="end point" />
+         <Button layoutX="439.0" layoutY="137.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#deployjaryanvabastebejaryan" text="add" />
+         <TextField fx:id="jvjstartcal" layoutX="545.0" layoutY="71.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="100.0" promptText="start node" />
+         <TextField fx:id="jvjendcal" layoutX="545.0" layoutY="107.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="100.0" promptText="end node" />
+         <TextField fx:id="jaryanvabastebevoltagvalue" layoutX="438.0" layoutY="170.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="230.0" promptText="Voltage Controlled Current Source value" />
+         <TextField fx:id="jvvstart" layoutX="438.0" layoutY="202.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="100.0" promptText="start point" />
+         <TextField fx:id="jvvend" layoutX="438.0" layoutY="237.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="100.0" promptText="end point" />
+         <Button layoutX="439.0" layoutY="268.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#deployjaryanvabastebevoltag" text="add" />
+         <TextField fx:id="jvvstartcal" layoutX="546.0" layoutY="202.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="100.0" promptText="start node" />
+         <TextField fx:id="jvvendcal" layoutX="546.0" layoutY="238.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="100.0" promptText="end node" />
+         <TextField fx:id="voltagvabastebejaryanvalue" layoutX="440.0" layoutY="303.0" prefHeight="25.0" prefWidth="230.0" promptText="Current Controlled Voltage Source value" />
+         <TextField fx:id="vvjstart" layoutX="439.0" layoutY="332.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="100.0" promptText="start point" />
+         <TextField fx:id="vvjend" layoutX="439.0" layoutY="367.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="100.0" promptText="end point" />
+         <Button layoutX="440.0" layoutY="399.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#deployvoltagvabastebejaryan" text="add" />
+         <TextField fx:id="vvjstartcal" layoutX="547.0" layoutY="332.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="100.0" promptText="positive node" />
+         <TextField fx:id="vvjendcal" layoutX="548.0" layoutY="369.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="100.0" promptText="negative node" />
+         <TextField fx:id="voltagvabastebevoltagvalue" layoutX="440.0" layoutY="434.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="230.0" promptText="Voltage Controlled Voltage Source value" />
+         <TextField fx:id="vvvstart" layoutX="440.0" layoutY="466.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="100.0" promptText="start point" />
+         <TextField fx:id="vvvend" layoutX="440.0" layoutY="501.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="100.0" promptText="end point" />
+         <Button layoutX="440.0" layoutY="533.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#deployvoltagvabastebevoltag" text="add" />
+         <TextField fx:id="vvvstartcal" layoutX="548.0" layoutY="466.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="100.0" promptText="positive node" />
+         <TextField fx:id="vvvendcal" layoutX="548.0" layoutY="502.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="100.0" promptText="negative node" />
+         <ImageView fitHeight="115.0" fitWidth="63.0" layoutX="370.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@jaryanvabastebejaryan.png" />
+            </image>
+         </ImageView>
+         <ImageView fitHeight="115.0" fitWidth="63.0" layoutX="370.0" layoutY="165.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@jaryanvabastebejaryan.png" />
+            </image>
+         </ImageView>
+         <ImageView fitHeight="115.0" fitWidth="63.0" layoutX="370.0" layoutY="293.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@voltazhvabastebejaryan.png" />
+            </image>
+         </ImageView>
+         <ImageView fitHeight="115.0" fitWidth="63.0" layoutX="370.0" layoutY="430.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@voltazhvabastebejaryan.png" />
+            </image>
+         </ImageView>
+         <TextField fx:id="controljvvstart" layoutX="690.0" layoutY="202.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="100.0" promptText="start point" />
+         <TextField fx:id="controljvvend" layoutX="690.0" layoutY="238.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="100.0" promptText="end point" />
+         <TextField fx:id="controlvvvstart" layoutX="684.0" layoutY="466.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="100.0" promptText="start point" />
+         <TextField fx:id="controlvvvend" layoutX="684.0" layoutY="501.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="100.0" promptText="end point" />
+         <Text layoutX="683.0" layoutY="458.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Controlling part" wrappingWidth="114.0" />
+         <TextField fx:id="controljvjstart" layoutX="690.0" layoutY="75.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="100.0" promptText="start point" />
+         <TextField fx:id="controljvjend" layoutX="690.0" layoutY="109.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="100.0" promptText="end point" />
+         <TextField fx:id="controlvvjstart" layoutX="690.0" layoutY="332.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="100.0" promptText="start point" />
+         <TextField fx:id="controlvvjend" layoutX="690.0" layoutY="367.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="100.0" promptText="end point" />
+         <Text layoutX="690.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Controlling part" wrappingWidth="114.0" />
+         <Text layoutX="690.0" layoutY="192.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Controlling part" wrappingWidth="114.0" />
+         <Text layoutX="690.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Controlling part" wrappingWidth="114.0" />
+         </children>
+   </Pane>
+</AnchorPane>
